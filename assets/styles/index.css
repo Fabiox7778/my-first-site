@@ -1,0 +1,15 @@
+/* Reset do CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+    text-align: center;
+    color: antiquewhite;
+}
+
+header {
+    background-color: rgb(77, 22, 179);
+}
