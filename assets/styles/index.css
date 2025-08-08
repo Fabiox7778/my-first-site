@@ -38,6 +38,17 @@ about-section {
     margin: 0 auto;
     padding: 40px;
     border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+hobbies {
+    display: block;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 #titulo-sobre-mim {
@@ -46,6 +57,8 @@ about-section {
     width: 80%; 
     background-color: white;
     border-bottom: 2px solid #0f009b;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .texto-sobre-mim {
@@ -53,4 +66,43 @@ about-section {
     width: 80%;
     background-color: white;
     color: black;
+}
+
+#titulo-hobbies {
+    color: black;
+    font-size: 42px;
+    width: 80%; 
+    background-color: white;
+    border-bottom: 2px solid #0f009b;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.texto-hobbies{
+    font-size: 34px;
+    width: 80%;
+    background-color: white;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+}
+
+li {
+    background-color: #3572f7;
+    padding: 12px;
+    border-left: 4px solid #5d139b;
+    font-size: 18px;
+    min-width: 250px;
+    color: white;
+}
+
+li:hover {
+    background-color: rgb(22, 68, 167);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
 }
