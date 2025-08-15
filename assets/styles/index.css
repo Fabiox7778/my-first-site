@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 /* Reset do CSS */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +11,10 @@ body {
     display: flex;
     flex-direction: column;
     min-width: 100vh;
-    font-family: "Nunito Sans"
+    font-family: "Nunito Sans";
 }
 
+/* Header */
 header {
     background-image: linear-gradient(175deg, #5d139b 0%, #0f009b 100%);
     color: white;
@@ -22,6 +22,15 @@ header {
     text-align: center;
 }
 
+header h1 {
+    font-size: 48px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Main */
 main {
     background-color: rgb(44, 44, 44);
     flex: 1;
@@ -31,7 +40,9 @@ main {
     padding-right: 38px;
 }   
 
-about-section {
+about-section,
+hobbies,
+contact {
     display: block;
     background-color: white;
     width: 80%;
@@ -41,33 +52,7 @@ about-section {
     margin-bottom: 50px;
 }
 
-hobbies {
-    display: block;
-    background-color: white;
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
-#titulo-sobre-mim {
-    color: black;
-    font-size: 42px;
-    width: 80%; 
-    background-color: white;
-    border-bottom: 2px solid #0f009b;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.texto-sobre-mim {
-    font-size: 34px;
-    width: 80%;
-    background-color: white;
-    color: black;
-}
-
+#titulo-sobre-mim,
 #titulo-hobbies {
     color: black;
     font-size: 42px;
@@ -78,7 +63,8 @@ hobbies {
     margin-bottom: 5px;
 }
 
-.texto-hobbies{
+.texto-sobre-mim,
+.texto-hobbies {
     font-size: 34px;
     width: 80%;
     background-color: white;
@@ -90,6 +76,7 @@ ul {
     padding: 0;
     display: flex;
     gap: 12px;
+    flex-wrap: wrap; /* Garante que os itens fiquem em várias linhas */
 }
 
 li {
@@ -107,16 +94,7 @@ li:hover {
     transition: all 0.3s ease;
 }
 
-contact {
-    display: block;
-    background-color: white;
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 10px;
-    margin-bottom: 50px;
-}
-
+/* Contact Section */
 contact h2 {
     margin-bottom: 8px;
     font-size: 30px;
@@ -137,7 +115,7 @@ contact a {
     border: 2px solid #ff7b00;
     border-radius: 25px;
     display: inline-block;
-    transition: all o.3s ease;
+    transition: all 0.3s ease;
 }
 
 contact a:hover {
@@ -146,6 +124,7 @@ contact a:hover {
     transform: translateY(-2px);
 }
 
+/* Footer */
 footer {
     background-image: linear-gradient(175deg, #5d139b 0%, #0f009b 100%);
     color: white;
@@ -155,4 +134,111 @@ footer {
 
 footer p {
     font-size: 2rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 24px;
+    }
+
+    about-section, hobbies, contact {
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    #titulo-sobre-mim,
+    #titulo-hobbies {
+        font-size: 30px;
+    }
+
+    .texto-sobre-mim,
+    .texto-hobbies {
+        font-size: 24px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        width: 80%;
+        font-size: 16px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 40px 0;
+        font-size: 18px;
+    }
+}
+
+/* Responsividade para telas de smartphones (máximo 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    about-section, hobbies, contact {
+        width: 95%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    #titulo-sobre-mim,
+    #titulo-hobbies {
+        font-size: 24px;
+    }
+
+    .texto-sobre-mim,
+    .texto-hobbies {
+        font-size: 18px;
+    }
+
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    li {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    footer {
+        padding: 20px 0;
+        font-size: 16px;
+    }
 }
